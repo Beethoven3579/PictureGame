@@ -1,5 +1,17 @@
-console.log("hello");
 
-const date = new Date()
+window.onload = init;
 
-console.log(date.getMinutes())
+function init() {
+let images = document.getElementsByTagName('img');
+for (let i = 0; i < images.length; i++) {
+    images[i].onclick = showAnswer;
+    }
+
+};
+
+function showAnswer(e) {
+    let image = e.target;
+    let name = image.id;
+    name = name + ".jpg";
+    image.src = name;
+};
